@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import matplotlib.colors as mcolors
 from collections import deque
 
-from typing import List, Optional, Literal
+from typing import List, Literal
 
 TREE_TYPE = Literal["binary", "heap"]
 ALGORITHM = Literal["bfs", "dfs"]
