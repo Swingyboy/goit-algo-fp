@@ -71,7 +71,13 @@ def build_heap(elements: List[int], max_heap: bool = True) -> Node:
 
 
 if __name__ == "__main__":
-    elements = [10, 80, 30, 20, 50, 100, 40, 25, 15, 5]
-    root = build_heap(elements, max_heap=False)
+    import argparse
+
+    parser = argparse.ArgumentParser(description="Build a heap and draw it")
+    parser.add_argument("--max_heap", action="store_true", help="Build a max heap")
+    parser.add_argument("elements", nargs="+", type=int, help="Elements to build the heap")
+    args = parser.parse_args()
+
+    root = build_heap(args.elements, args.max_heap)
     draw_tree(root)
 
